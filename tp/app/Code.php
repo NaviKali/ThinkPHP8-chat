@@ -8,7 +8,20 @@ namespace app;
  */
 
 return [
-    200 =>"Request Success!",
-    444 =>"Request Warning!",
-    500 =>"Request Error!",
+    /**
+     * Code:Data
+     */
+    "Request" => [
+        200 => "Request Success!",
+        444 => "Request Warning!",
+        500 => "Request Error!",
+    ],
+    /**
+     * Code:Void(Name)
+     */
+    "Socket" => [
+        11001=>"getChatData",
+        11002=>"SendChat",
+        11003=>"getUserList",
+    ],
 ];

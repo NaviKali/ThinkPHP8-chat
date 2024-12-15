@@ -8,6 +8,13 @@ use think\response\Json;
 class Base extends BaseController
 {
     /**
+     * MakeGuid
+     */
+    public function MakeGuid()
+    {
+        return md5(date("Y-m-d H:i:s").uniqid(mt_rand(), true).rand(0,1000));
+    }
+    /**
      * MsgOther
      * @var array
      */
@@ -39,6 +46,18 @@ class Base extends BaseController
             "data" => $data,
             "other" => $this->MsgOther == [] ? $this->MsgOther : $other,
         ]);
+    }
+    /**
+     * Warning
+     * @access public
+     * @param string $msg
+     * @param array|object $data default:[]
+     * @param array $other default:[]
+     * @return Json
+     */
+    public function Warning(string $msg,array|object $data = [], array $other = []):Json
+    {
+        return $this->Message(444,$msg,$data,$this->MsgOther == [] ? $this->MsgOther : $other);
     }
     /**
      * Error
