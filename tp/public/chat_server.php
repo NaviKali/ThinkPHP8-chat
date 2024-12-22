@@ -20,6 +20,7 @@ header("Access-Control-Allow-Origin:*");
 header("Access-Control-Allow-Headers:*");
 
 
+
 // 执行HTTP应用并响应
 $http = (new App())->http;
 

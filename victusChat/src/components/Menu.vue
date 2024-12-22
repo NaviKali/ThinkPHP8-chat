@@ -33,6 +33,14 @@ const menu = ref<menuItem[]>([
     img: "/src/assets/Image/friend.png",
     page: "friend",
   },
+  {
+    img: "/src/assets/Image/circle.png",
+    page: "circle",
+  },
+  {
+    img: "/src/assets/Image/media.png",
+    page: "media",
+  },
 ]);
 
 const HandleChangePage = (page: string) => {
